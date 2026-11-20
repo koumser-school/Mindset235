@@ -1,17 +1,240 @@
-/*style general de Mindset235*/
-*{
-  margin: 0;
-  padding : 0;
+* {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 body {
-  font-family: Arial, sans-serif;
-  background-color : #f5f7fa;
-  color : #222;
+  background-color: #ffffff;
+  color: rgb(35, 34, 34);
+  font-family: Arial, Helvetica, sans-serif;
 }
-h1 {
-    color: #1769aa;
-    text-align: center;
-    margin-top: 50px;
-  }
-    
+.header nav {
+  background-color: #102b50;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
+}
+.logo {
+  color: lab(100% 0.01 -0.01);
+  font-family: 'poppins',sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.logo span {
+  color: #007bff;
+  font-weight: 800;
+}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+.hero-content {
+  flex: 1;
+}
+.hero-tag {
+  background-color: #e0f0ff;
+  color: #007bff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.hero-content h1 {
+  font-size: 3.2rem;
+  color: #111;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+.hero-content p {
+  font-size: 16px;
+  color: #665;
+  margin-bottom: 25px;
+}
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-image img {
+  width: 100%;
+  max-width: 100%;
+  border-color: 20px;
+  object-fit: contain;
+  height: auto;
+  border-radius: 30px;
+  box-shadow: 30px;
+  filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.15));
+}
+.primary-button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+  transition: background 0.3s;
+}
+.primary-button:hover{
+  background-color: #0056b3;
+}
+/*conteneur globale pour ccentrer les contenu*/
+.container {
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.categories {
+  padding: 40px 0;
+}
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.section-title p {
+  color: #665;
+}
+.section-title h2 {
+  font-size: 28px;
+  color: #222;
+}
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+}
+.category-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: poniter;
+}
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+.category-card h3 {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+}
+.category-card p {
+  font-size: 14px;
+  color: #838;
+}
+.produits {
+  padding: 40px 0;
+  background-color: #f9f9f9;
+}
+/* 1. La grille qui accueille les produits */
+.product-grid {
+  display: grid;
+  /* Crée des colonnes automatiques. Sur un grand écran, on aura 4 ou 5 colonnes */
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); 
+  gap: 20px; /* Espace entre les cartes */
+  margin-top: 30px;
+}
+
+/* 2. La carte du produit */
+.product-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 10px; /* Espace intérieur */
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease;
+  /* On enlève la bordure pour faire plus propre, on met une ombre légère */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
+}
+
+/* Effet quand on passe la souris */
+.product-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1); 
+}
+
+/* 3. L'image du produit */
+.product-card img {
+  width: 100%;
+  height: 100px; /* HAUTEUR FIXE : c'est ça qui va tout aligner ! */
+  object-fit: contain; /* L'image entière s'affiche sans être coupée ou écrasée */
+  background-color: #f8f9fa; /* Petit fond gris très clair pour faire ressortir le produit */
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* 4. Le texte (Titre, catégorie, prix) */
+.product-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Pousse le bouton vers le bas */
+}
+
+.product-info span {
+  font-size: 11px;
+  color: #888;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.product-info h3 {
+  font-size: 16px;
+  color: #222;
+  margin: 0 0 10px 0;
+  white-space: nowrap; /* Empêche le titre de passer à la ligne */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Ajoute "..." si le titre est trop long */
+}
+
+.product-info .price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #007BFF;
+  margin-bottom: 15px;
+  margin-top: auto; /* Aligne les prix tout en bas */
+}
+
+/* 5. Le bouton */
+.add-to-cart {
+  background-color: #222;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s;
+}
+
+.add-to-cart:hover {
+  background-color: #007BFF;
+}
