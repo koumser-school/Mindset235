@@ -132,15 +132,22 @@ body {
 .category-card {
   background: #fff;
   border: 1px solid #eee;
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 20px;
   text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0  4px 1opx rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
   cursor: poniter;
 }
 .category-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+.category-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
 }
 .category-card h3 {
   font-size: 14px;
@@ -188,7 +195,7 @@ body {
   object-fit: contain; /* L'image entière s'affiche sans être coupée ou écrasée */
   background-color: #f8f9fa; /* Petit fond gris très clair pour faire ressortir le produit */
   border-radius: 8px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 /* 4. Le texte (Titre, catégorie, prix) */
@@ -237,4 +244,38 @@ body {
 
 .add-to-cart:hover {
   background-color: #007BFF;
+}
+/*promotion*/
+.promotion-banner {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  margin-top: 60px;
+}
+.promotion-banner h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  font-weight: 800;
+  color: rgb(64, 88, 70);
+}
+.promotion-banner p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #243246;
+}
+.promotion-banner .primary-button {
+  background-color: #007BFF;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease,transform 0.3s ease;
+  display: inline-block;
+}
+.promotion-banner .primary-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
 }
